@@ -32,8 +32,10 @@ public class Pet {
     @Enumerated(EnumType.STRING)
     private Sex sex;
 
-    @NotBlank
-    private String breed;
+    @NotNull
+    @ManyToOne
+    @JoinColumn(name = "breed_id")
+    private Breed breed;
 
     @NotBlank
     private String image;
@@ -43,5 +45,4 @@ public class Pet {
 
     @OneToMany(mappedBy = "pet")
     private List<Comment> comments = new ArrayList<>();
-
 }

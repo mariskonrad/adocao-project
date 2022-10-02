@@ -17,3 +17,14 @@ VALUES ('Feira de adoção', '2022-10-19 10:00:00', 'Praça do Imigrante', 'http
 
 INSERT INTO event (description, start_event, location, image)
 VALUES ('Buffet de cachorro quente', '2022-10-20 20:00:00', 'Praça do Imigrante', 'https://i.ytimg.com/vi/TNPNi_w-Vpc/maxresdefault.jpg');
+
+--------
+
+INSERT INTO breed (breed_name)
+VALUES ('Vira-lata');
+
+INSERT INTO breed (breed_name)
+VALUES ('Pastor alemão');
+
+INSERT INTO breed (breed_name)
+VALUES ('Basset');

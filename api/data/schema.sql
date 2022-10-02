@@ -38,7 +38,7 @@ CREATE TABLE pet (
 	age INT NOT NULL,
 	size VARCHAR(6) NOT NULL,
 	sex CHAR(1) NOT NULL,
-	breed_id INT NOT NULL,
+	breed_id BIGINT NOT NULL,
 	image VARCHAR(512) NOT NULL,
 	available BOOLEAN NOT NULL
 );
