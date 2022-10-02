@@ -9,3 +9,11 @@ VALUES ('Sereninho', 6, 'SMALL', 'M', 'Vira-lata', 'https://images.unsplash.com/
 
 INSERT INTO pet (name, age, size, sex, breed, image, available)
 VALUES ('Bili', 4, 'BIG', 'M', 'Vira-lata', 'https://images.unsplash.com/photo-1560525821-d5615ef80c69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80', true);
+
+--------
+
+INSERT INTO event (description, start_event, location, image)
+VALUES ('Feira de adoção', '2022-10-19 10:00:00', 'Praça do Imigrante', 'https://reporterunesp.faac.unesp.br/wp-content/uploads/2021/07/WhatsApp-Image-2021-07-29-at-15.31.19.jpeg');
+
+INSERT INTO event (description, start_event, location, image)
+VALUES ('Buffet de cachorro quente', '2022-10-20 20:00:00', 'Praça do Imigrante', 'https://i.ytimg.com/vi/TNPNi_w-Vpc/maxresdefault.jpg');
