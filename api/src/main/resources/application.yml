@@ -3,3 +3,13 @@ spring:
     url: ${URL}
     username: ${USERNAME}
     password: ${PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+server:
+  error:
+    include-message: always
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
