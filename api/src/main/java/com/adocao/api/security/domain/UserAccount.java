@@ -1,14 +1,8 @@
 package com.adocao.api.security.domain;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +11,9 @@ import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Getter @Setter @EqualsAndHashCode(of = "id") @ToString(of = "id")
-public class Username {
+@Builder
+@AllArgsConstructor @NoArgsConstructor
+public class UserAccount {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
@@ -35,11 +31,12 @@ public class Username {
     @NotNull
     private boolean active;
 
-    @OneToMany(mappedBy = "username")
-    private List<Permissions> permissions = new ArrayList<>();
+    @OneToMany(mappedBy = "username", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<AccountPermission> permissions = new ArrayList<>();
 
-    public void addPermission(Permissions permissions) {
-        this.permissions.add(permissions);
-        permissions.setUsername(this);
+    public void addPermission(AccountPermission permission) {
+        this.permissions.add(permission);
+        permission.setUsername(this);
     }
 }
+

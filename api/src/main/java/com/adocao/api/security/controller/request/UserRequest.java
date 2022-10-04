@@ -1,11 +1,13 @@
 package com.adocao.api.security.controller.request;
 
+import com.adocao.api.security.domain.AccountPermission;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @Getter
 @Setter
@@ -20,4 +22,6 @@ public class UserRequest {
 
     @NotBlank
     private String password;
+
+    private List<AccountPermission> permissions;
 }

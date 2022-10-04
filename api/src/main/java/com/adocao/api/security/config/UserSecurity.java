@@ -1,6 +1,6 @@
 package com.adocao.api.security.config;
 
-import com.adocao.api.security.domain.Username;
+import com.adocao.api.security.domain.UserAccount;
 import lombok.Getter;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -21,7 +21,7 @@ public class UserSecurity implements UserDetails {
     private final boolean credentialsNonExpired;
     private final boolean enabled;
 
-    public UserSecurity(Username user) {
+    public UserSecurity(UserAccount user) {
 
         this.id = user.getId();
         this.username = user.getEmail();
@@ -36,6 +36,4 @@ public class UserSecurity implements UserDetails {
                 .map(permission -> new SimpleGrantedAuthority(permission.getRole().getRole()))
                 .collect(Collectors.toList());
     }
-
-
 }

@@ -14,7 +14,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Getter
 @Setter
 @EqualsAndHashCode(of = "id") @ToString(of = "id")
-public class Permissions {
+public class AccountPermission {
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private Long id;
@@ -24,5 +24,5 @@ public class Permissions {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private Username username;
+    private UserAccount username;
 }
