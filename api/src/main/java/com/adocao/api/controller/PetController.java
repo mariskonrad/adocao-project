@@ -27,8 +27,8 @@ public class PetController {
         return petService.getAllPets(pageable);
     }
 
-    @GetMapping("pets/{id}")
+    @GetMapping("/{id}")
     public PetDetailsResponse getPetDetails(@PathVariable Long id) {
-        return petDetailsService.getPetById(id);
+        return petDetailsService.getPetDetails(id);
     }
 }
