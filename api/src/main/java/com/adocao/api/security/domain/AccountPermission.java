@@ -1,26 +1,23 @@
 package com.adocao.api.security.domain;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 
-import static javax.persistence.EnumType.STRING;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Getter
 @Setter
 @EqualsAndHashCode(of = "id") @ToString(of = "id")
+@Builder
+@NoArgsConstructor @AllArgsConstructor
 public class AccountPermission {
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private Long id;
 
-    @Enumerated(STRING)
-    private Role role;
+    private String role;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

@@ -1,6 +1,5 @@
 package com.adocao.api.security.controller.request;
 
-import com.adocao.api.security.domain.AccountPermission;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,5 +22,5 @@ public class UserRequest {
     @NotBlank
     private String password;
 
-    private List<AccountPermission> permissions;
+    private List<String> permissions;
 }
