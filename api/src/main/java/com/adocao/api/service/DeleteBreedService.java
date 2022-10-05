@@ -13,7 +13,6 @@ public class DeleteBreedService {
     @Autowired
     private BreedRepository breedRepository;
 
-
     public void delete(Long id) {
         Breed breed = breedRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY, "Raça não encontrada."));
         breedRepository.deleteById(breed.getId());

@@ -1,8 +1,10 @@
 package com.adocao.api.controller;
 
+import com.adocao.api.controller.request.AddBreedRequest;
 import com.adocao.api.controller.response.GetAllBreedsResponse;
 import com.adocao.api.controller.response.GetBreedDetailsResponse;
 import com.adocao.api.repository.BreedRepository;
+import com.adocao.api.service.AddBreedService;
 import com.adocao.api.service.DeleteBreedService;
 import com.adocao.api.service.GetAllBreedsService;
 import com.adocao.api.service.GetBreedDetailsService;
@@ -27,6 +29,9 @@ public class BreedController {
     @Autowired
     private DeleteBreedService deleteBreedService;
 
+    @Autowired
+    private AddBreedService addBreedService;
+
     @GetMapping
     public Page<GetAllBreedsResponse> getAllBreeds(Pageable pageable) {
         return getAllBreedsService.getAllBreeds(pageable);
@@ -35,6 +40,11 @@ public class BreedController {
     @GetMapping("/{id}")
     public GetBreedDetailsResponse getBreedDetails(@PathVariable Long id) {
         return getBreedDetailsService.getBreed(id);
+    }
+
+    @PostMapping
+    public void addBreed(@RequestBody AddBreedRequest request) {
+        addBreedService.addBreed(request);
     }
 
     @DeleteMapping("/{id}")
