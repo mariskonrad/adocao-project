@@ -1,12 +1,10 @@
 package com.adocao.api.controller.response;
+
 import lombok.*;
 
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
-public class BreedResponse {
+@Getter @Setter
+@Builder @AllArgsConstructor @NoArgsConstructor
+public class GetAllBreedsResponse {
     private Long id;
     private String breedName;
 }
