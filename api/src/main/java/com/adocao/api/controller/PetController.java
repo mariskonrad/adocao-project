@@ -1,12 +1,11 @@
 package com.adocao.api.controller;
 
 import com.adocao.api.controller.request.AddPetRequest;
+import com.adocao.api.controller.request.EditPetRequest;
+import com.adocao.api.controller.response.EditPetResponse;
 import com.adocao.api.controller.response.GetPetsResponse;
 import com.adocao.api.controller.response.PetDetailsResponse;
-import com.adocao.api.service.AddPetService;
-import com.adocao.api.service.DeletePetService;
-import com.adocao.api.service.PetDetailsService;
-import com.adocao.api.service.GetAllPetsService;
+import com.adocao.api.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -28,6 +27,9 @@ public class PetController {
     @Autowired
     private DeletePetService deletePetService;
 
+    @Autowired
+    private EditPetService editPetService;
+
     @GetMapping
     public Page<GetPetsResponse> getAllPets(Pageable pageable) {
         return petService.getAllPets(pageable);
@@ -41,6 +43,11 @@ public class PetController {
     @PostMapping
     public void add(@RequestBody AddPetRequest request) {
         addPetService.addPet(request);
+    }
+
+    @PutMapping("/{id}")
+    public EditPetResponse editPet(@PathVariable Long id, @RequestBody EditPetRequest request) {
+        return editPetService.edit(id, request);
     }
 
     @DeleteMapping("/{id}")
