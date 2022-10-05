@@ -4,6 +4,7 @@ import com.adocao.api.controller.request.AddPetRequest;
 import com.adocao.api.controller.response.GetPetsResponse;
 import com.adocao.api.controller.response.PetDetailsResponse;
 import com.adocao.api.service.AddPetService;
+import com.adocao.api.service.DeletePetService;
 import com.adocao.api.service.PetDetailsService;
 import com.adocao.api.service.GetAllPetsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,9 @@ public class PetController {
     @Autowired
     private AddPetService addPetService;
 
+    @Autowired
+    private DeletePetService deletePetService;
+
     @GetMapping
     public Page<GetPetsResponse> getAllPets(Pageable pageable) {
         return petService.getAllPets(pageable);
@@ -37,5 +41,10 @@ public class PetController {
     @PostMapping
     public void add(@RequestBody AddPetRequest request) {
         addPetService.addPet(request);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        deletePetService.delete(id);
     }
 }
