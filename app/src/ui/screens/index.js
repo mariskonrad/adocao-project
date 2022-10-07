@@ -1,0 +1,7 @@
+export { LoginScreen } from './login/login.screen'
+export { AnimalScreen } from './animal/animal.screen'
+export { AnimalsScreen } from './animals/animals.screen'
+export { ContactScreen } from './contact/contact.screen'
+export { HelpScreen } from './help/help.screen'
+export { SignUpScreen } from './sign-up/sign-up.screen'
+export { HomeScreen } from './home/home.screen'
