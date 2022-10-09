@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useAnimalsApi } from '../../../assets/hooks/api'
 import { AnimalCard, Header } from '../../components'
+import { Link } from 'react-router-dom'
 import './animals.style.css'
 
 export function AnimalsScreen() {
@@ -28,7 +29,9 @@ export function AnimalsScreen() {
         {allPets?.content.map(pet => {
           return (
             <div key={pet.id} className='card-container'>
-              <AnimalCard animal={pet} />
+              <Link to={`/adotaveis/${pet.id}`}>
+                <AnimalCard animal={pet} />
+              </Link>
             </div>
           )
         })}
