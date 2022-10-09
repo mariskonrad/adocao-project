@@ -20,10 +20,10 @@ export function useUserApi() {
   }
 
   async function signUp(username, email, password) {
-    const response = await httpInstance.post('/usuarios', {
-      nome: username,
+    const response = await httpInstance.post('/users', {
+      name: username,
       email: email,
-      senha: password
+      password: password
     })
     return response
   }

@@ -1,3 +1,5 @@
+import { Header } from '../../components/header/header.component'
+
 export function HomeScreen() {
-  return 'Home screen'
+  return <Header />
 }

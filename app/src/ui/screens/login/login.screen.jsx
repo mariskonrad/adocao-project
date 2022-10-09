@@ -3,6 +3,7 @@ import { useUserApi } from '../../../assets/hooks/api'
 import { useGlobalUser } from '../../../assets/context'
 import { useNavigate, Link } from 'react-router-dom'
 import { ROUTES } from '../../../constants/routes'
+import './login.style.css'
 
 export function LoginScreen() {
   const [username, setUsername] = useState('')
@@ -44,7 +45,8 @@ export function LoginScreen() {
         <h1>Login</h1>
         <fieldset>
           <form onSubmit={onLoginSubmit}>
-            <div>
+            <div className='form-input'>
+              <div className='form-input-title'>E-mail</div>
               <input
                 className='input-form'
                 name='username'
@@ -53,7 +55,8 @@ export function LoginScreen() {
                 onChange={handleUsernameChange}
               />
             </div>
-            <div>
+            <div className='form-input'>
+              <div className='form-input-title'>Senha</div>
               <input
                 className='input-form'
                 name='password'
