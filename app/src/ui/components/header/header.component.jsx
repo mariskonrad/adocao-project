@@ -5,12 +5,13 @@ import './header.style.css'
 import { useUserApi } from '../../../assets/hooks/api'
 
 export function Header() {
-  const [globalUser] = useGlobalUser()
+  const [globalUser, setGlobalUser] = useGlobalUser()
   const userApi = useUserApi()
   const navigate = useNavigate()
 
   async function handleLogout() {
-    userApi.logout()
+    await userApi.logout()
+    setGlobalUser({})
     navigate(ROUTES.LOGIN)
   }
 
