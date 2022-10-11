@@ -10,9 +10,16 @@ export function useAnimalsApi() {
     return response
   }
 
+  async function getPetDetails(id) {
+    const response = await httpInstance.get(`/pets/${id}`)
+    console.log('### response', response)
+    return response
+  }
+
   return useMemo(
     () => ({
-      getAllPets
+      getAllPets,
+      getPetDetails
     }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     []

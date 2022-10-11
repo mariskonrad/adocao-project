@@ -16,8 +16,6 @@ export function AnimalsScreen() {
     getAllPets()
   }, [petsApi])
 
-  console.log(allPets)
-
   if (!allPets) {
     return <h1>Nenhum pet cadastrado</h1>
   }
@@ -25,6 +23,7 @@ export function AnimalsScreen() {
   return (
     <>
       <Header />
+      <h1>Amigos disponíveis</h1>
       <div className='pets-container'>
         {allPets?.content.map(pet => {
           return (
