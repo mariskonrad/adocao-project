@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Objects;
+
 @Service
 public class IncludeUserService {
 
@@ -24,8 +26,15 @@ public class IncludeUserService {
         UserAccount user = UserMapper.toEntity(request);
         user.setPassword(passwordEncoder.encode(request.getPassword()));
         user.setActive(true);
-        request.getPermissions()
-                .forEach(permission -> user.addPermission(AccountPermission.builder().role(permission).build()));
+
+        if (Objects.isNull(request.getPermissions())) {
+            AccountPermission accountPermission = new AccountPermission();
+            accountPermission.setRole("ROLE_USUARIO");
+            user.addPermission(accountPermission);
+        } else {
+            request.getPermissions()
+                    .forEach(permission -> user.addPermission(AccountPermission.builder().role(permission).build()));
+        }
 
         userRepository.save(user);
 

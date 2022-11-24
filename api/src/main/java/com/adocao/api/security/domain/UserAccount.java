@@ -32,7 +32,7 @@ public class UserAccount {
     private boolean active;
 
     @OneToMany(mappedBy = "username", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<AccountPermission> permissions = new ArrayList<>();
+    private List<AccountPermission> permissions = new ArrayList();
 
     public void addPermission(AccountPermission permission) {
         this.permissions.add(permission);

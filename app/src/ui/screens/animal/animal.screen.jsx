@@ -1,7 +1,8 @@
-import { Header, AnimalDetails } from '../../components'
+import { Header, AnimalDetails, Button } from '../../components'
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useAnimalsApi } from '../../../assets/hooks/api'
+import './animal-screen.style.css'
 
 export function AnimalScreen() {
   const { id } = useParams()
@@ -29,6 +30,7 @@ export function AnimalScreen() {
       <Header />
       <div className='animal-screen-content'>
         <AnimalDetails animal={animal} />
+        <Button className='button-primary'>Quero adotar!</Button>
       </div>
     </>
   )

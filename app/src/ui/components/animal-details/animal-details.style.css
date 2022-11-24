@@ -1,0 +1,4 @@
+.animal-screen-description {
+  display: flex;
+  flex-direction: row;
+}
