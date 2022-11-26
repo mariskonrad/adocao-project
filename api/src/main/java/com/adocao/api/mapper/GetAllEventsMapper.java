@@ -13,5 +13,4 @@ public class GetAllEventsMapper {
                 .location(entity.getLocation())
                 .build();
     }
-
 }
