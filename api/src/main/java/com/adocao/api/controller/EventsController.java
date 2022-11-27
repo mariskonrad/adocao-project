@@ -48,9 +48,9 @@ public class EventsController {
         deleteEventService.delete(id);
     }
 
-    @PostMapping("/{id}")
-    public void editEvent(@RequestBody EditEventRequest request) {
-        editEventService.edit(request);
+    @PutMapping("/{id}")
+    public void editEvent(@PathVariable Long id, @RequestBody EditEventRequest request) {
+        editEventService.edit(id, request);
 
     }
 }
