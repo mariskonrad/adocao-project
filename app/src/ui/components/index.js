@@ -1,3 +1,4 @@
+export { EventCard } from './event-card/event-card.component'
 export { Button } from './button/button-component'
 export { AnimalDetails } from './animal-details/animal-details.component'
 export { Header } from './header/header.component'

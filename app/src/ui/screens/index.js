@@ -1,3 +1,4 @@
+export { EventsScreen } from './events/event.screen'
 export { LoginScreen } from './login/login.screen'
 export { AnimalScreen } from './animal/animal.screen'
 export { AnimalsScreen } from './animals/animals.screen'

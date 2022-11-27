@@ -17,7 +17,12 @@ export function AnimalsScreen() {
   }, [petsApi])
 
   if (!allPets) {
-    return <h1>Nenhum pet cadastrado</h1>
+    return (
+      <>
+        <Header />
+        <h1>Nenhum pet cadastrado</h1>
+      </>
+    )
   }
 
   return (

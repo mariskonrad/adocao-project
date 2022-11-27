@@ -2,23 +2,23 @@ import { useHttp } from '../_base/use-http.hook'
 import { baseUrl } from '../_base/base-url'
 import { useMemo } from 'react'
 
-export function useAnimalsApi() {
+export function useEventsApi() {
   const httpInstance = useHttp(baseUrl)
 
-  async function getAllPets() {
-    const response = await httpInstance.get('/pets')
+  async function getAllEvents() {
+    const response = await httpInstance.get('/events')
     return response
   }
 
-  async function getPetDetails(id) {
-    const response = await httpInstance.get(`/pets/${id}`)
+  async function getEventDetails(id) {
+    const response = await httpInstance.get(`events/${id}`)
     return response
   }
 
   return useMemo(
     () => ({
-      getAllPets,
-      getPetDetails
+      getAllEvents,
+      getEventDetails
     }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     []

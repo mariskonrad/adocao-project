@@ -21,9 +21,8 @@ export function AnimalScreen() {
       }
     }
     getAnimalById()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [animalsApi])
-
-  console.log('Id', id)
 
   return (
     <>
