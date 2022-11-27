@@ -1,9 +1,9 @@
 package com.adocao.api.controller;
 
-import com.adocao.api.controller.request.AddEventRequest;
-import com.adocao.api.controller.response.EventResponse;
-import com.adocao.api.service.AddEventService;
-import com.adocao.api.service.ListEventService;
+import com.adocao.api.controller.request.event.AddEventRequest;
+import com.adocao.api.controller.response.event.EventResponse;
+import com.adocao.api.service.event.AddEventService;
+import com.adocao.api.service.event.ListEventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

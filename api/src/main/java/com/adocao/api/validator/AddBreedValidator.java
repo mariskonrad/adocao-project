@@ -1,6 +1,6 @@
 package com.adocao.api.validator;
 
-import com.adocao.api.controller.request.AddBreedRequest;
+import com.adocao.api.controller.request.breed.AddBreedRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ResponseStatusException;

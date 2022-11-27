@@ -1,13 +1,13 @@
 package com.adocao.api.controller;
 
-import com.adocao.api.controller.request.AddBreedRequest;
-import com.adocao.api.controller.response.GetAllBreedsResponse;
-import com.adocao.api.controller.response.GetBreedDetailsResponse;
+import com.adocao.api.controller.request.breed.AddBreedRequest;
+import com.adocao.api.controller.response.breed.GetAllBreedsResponse;
+import com.adocao.api.controller.response.breed.GetBreedDetailsResponse;
 import com.adocao.api.repository.BreedRepository;
-import com.adocao.api.service.AddBreedService;
-import com.adocao.api.service.DeleteBreedService;
-import com.adocao.api.service.GetAllBreedsService;
-import com.adocao.api.service.GetBreedDetailsService;
+import com.adocao.api.service.breed.AddBreedService;
+import com.adocao.api.service.breed.DeleteBreedService;
+import com.adocao.api.service.breed.GetAllBreedsService;
+import com.adocao.api.service.breed.GetBreedDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

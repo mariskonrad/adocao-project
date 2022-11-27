@@ -1,11 +1,11 @@
 package com.adocao.api.controller;
 
-import com.adocao.api.controller.request.AddPetRequest;
-import com.adocao.api.controller.request.EditPetRequest;
-import com.adocao.api.controller.response.EditPetResponse;
-import com.adocao.api.controller.response.GetPetsResponse;
-import com.adocao.api.controller.response.PetDetailsResponse;
-import com.adocao.api.service.*;
+import com.adocao.api.controller.request.pet.AddPetRequest;
+import com.adocao.api.controller.request.pet.EditPetRequest;
+import com.adocao.api.controller.response.pet.EditPetResponse;
+import com.adocao.api.controller.response.pet.GetPetsResponse;
+import com.adocao.api.controller.response.pet.PetDetailsResponse;
+import com.adocao.api.service.pet.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
