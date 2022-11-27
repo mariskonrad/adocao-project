@@ -1,4 +1,4 @@
-package com.adocao.api.service;
+package com.adocao.api.service.event;
 
 import com.adocao.api.repository.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;

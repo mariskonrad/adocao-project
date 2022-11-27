@@ -1,4 +1,4 @@
-package com.adocao.api.service;
+package com.adocao.api.service.event;
 
 import com.adocao.api.controller.response.event.EventResponse;
 import com.adocao.api.domain.Event;
