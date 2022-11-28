@@ -10,7 +10,8 @@ import {
   AnimalScreen,
   ContactScreen,
   HelpScreen,
-  EventsScreen
+  EventsScreen,
+  EventScreen
 } from './ui/screens'
 
 function PrivateRoute({ children }) {
@@ -72,6 +73,14 @@ function App() {
           element={
             <PrivateRoute>
               <EventsScreen />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path={`${ROUTES.EVENTS}/:id`}
+          element={
+            <PrivateRoute>
+              <EventScreen />
             </PrivateRoute>
           }
         />

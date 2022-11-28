@@ -14,7 +14,6 @@ export function AnimalScreen() {
     async function getAnimalById() {
       try {
         const response = await animalsApi.getPetDetails(id)
-        console.log('### animal screen response', response)
         setAnimal(response)
       } catch (error) {
         setErrorMessage('Animal não encontrado.')
