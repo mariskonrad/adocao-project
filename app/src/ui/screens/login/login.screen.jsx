@@ -3,7 +3,10 @@ import { useUserApi } from '../../../assets/hooks/api'
 import { useGlobalUser } from '../../../assets/context'
 import { useNavigate, Link } from 'react-router-dom'
 import { ROUTES } from '../../../constants/routes'
+import LOGO from '../../../images/logo.png'
 import './login.style.css'
+import '../../components/button/button.style.css'
+import { Button } from '../../components'
 
 export function LoginScreen() {
   const [username, setUsername] = useState('')
@@ -39,10 +42,10 @@ export function LoginScreen() {
   return (
     <div className='form-container'>
       <div>
-        <p>AQUI VAI UMA IMAGEM DEPOIS</p>
+        <img src={LOGO} alt='Logo' />
       </div>
-      <div className='login-form'>
-        <h1>Login</h1>
+      <div className='login-box'>
+        <div className='text-primary'>Login</div>
         <fieldset>
           <form onSubmit={onLoginSubmit}>
             <div className='form-input'>
@@ -66,7 +69,7 @@ export function LoginScreen() {
               />
             </div>
             <div>
-              <button>Enviar</button>
+              <button className='primary-button'>Enviar</button>
             </div>
           </form>
         </fieldset>

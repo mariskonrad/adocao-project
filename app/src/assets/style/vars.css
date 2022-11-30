@@ -1,0 +1,10 @@
+:root {
+  --primaryColor: palevioletred;
+  --secundaryColor: blueviolet;
+  --tertiaryColor: lightgray;
+  --fourthColor: whitesmoke;
+  --fifthColor: rgb(244 244 244);
+  --primaryTextColor: #323232;
+  --boxShadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  --linkColor: #9b2d74;
+}

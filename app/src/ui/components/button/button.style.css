@@ -1,3 +1,24 @@
-.button-primary {
-  background-color: green;
+.primary-button {
+  color: var(--primaryTextColor);
+  background-color: palevioletred;
+  border: 2px solid palevioletred;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  background-color: var(--secondaryColor);
+  color: var(--primaryTextColor);
+}
+
+.primary-button.bold {
+  font-weight: 600;
+  color: var(--tertiaryColor);
+}
+
+.primary-button.bold:hover {
+  background-color: var(--primaryColor);
+  color: var(--primaryTextColor);
 }
