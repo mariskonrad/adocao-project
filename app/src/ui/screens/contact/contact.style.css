@@ -1,0 +1,26 @@
+.icons {
+  height: 20px;
+  margin: 5px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+.contact-info {
+  display: flex;
+  flex: row;
+  align-items: center;
+  margin: 10px;
+}
