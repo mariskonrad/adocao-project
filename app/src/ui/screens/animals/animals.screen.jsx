@@ -28,17 +28,19 @@ export function AnimalsScreen() {
   return (
     <>
       <Header />
-      <h1>Amigos disponíveis</h1>
-      <div className='pets-container'>
-        {allPets?.content.map(pet => {
-          return (
-            <div key={pet.id} className='card-container'>
-              <Link to={`/adotaveis/${pet.id}`}>
-                <AnimalCard animal={pet} />
-              </Link>
-            </div>
-          )
-        })}
+      <div className='container'>
+        <h1 className='title'>Amigos disponíveis</h1>
+        <div className='pets-container'>
+          {allPets?.content.map(pet => {
+            return (
+              <div key={pet.id} className='card-container'>
+                <Link to={`/adotaveis/${pet.id}`}>
+                  <AnimalCard animal={pet} />
+                </Link>
+              </div>
+            )
+          })}
+        </div>
       </div>
     </>
   )

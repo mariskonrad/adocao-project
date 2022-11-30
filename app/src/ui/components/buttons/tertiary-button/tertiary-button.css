@@ -1,0 +1,13 @@
+.tertiary-button {
+  background: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: solid 1px var(--secundaryColor);
+  color: var(--primaryTextColor);
+  cursor: pointer;
+}
+
+.tertiary-button:hover {
+  background-color: var(--primaryTextColor);
+  color: var(--tertiaryColor);
+}

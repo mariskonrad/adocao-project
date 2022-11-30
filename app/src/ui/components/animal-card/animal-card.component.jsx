@@ -7,10 +7,10 @@ export function AnimalCard({ animal }) {
       <div className='animal-imagem'>
         <img src={animal.image} alt='Imagem do cachorro' className='animal-image' />
       </div>
-      <div>Nome: {animal.name}</div>
-      <div>Idade: {animal.age}</div>
-      <div>Tamanho: {SIZE[animal.size]}</div>
-      <div>{SEX[animal.sex]}</div>
+      <div className='text-primary'>{animal.name}</div>
+      <div className='text-secondary'>Idade: {animal.age}</div>
+      <div className='text-secondary'>Tamanho: {SIZE[animal.size]}</div>
+      <div className='text-secondary'>{SEX[animal.sex]}</div>
     </div>
   )
 }

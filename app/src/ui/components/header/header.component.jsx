@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useGlobalUser } from '../../../assets/context'
 import './header.style.css'
 import { useUserApi } from '../../../assets/hooks/api'
+import LOGO from '../../../images/logo.png'
 
 export function Header() {
   const [globalUser, setGlobalUser] = useGlobalUser()
@@ -17,24 +18,32 @@ export function Header() {
 
   if (globalUser) {
     return (
-      <div className='header-container'>
-        <div className='header-content'>
-          <div>Logo</div>
-          <div>
-            <Link to={ROUTES.ANIMALS}>Adotáveis</Link>
+      <div className='container'>
+        <div className='header-container'>
+          <div className='header-content'>
+            <div>
+              <Link to={ROUTES.HOME}>
+                <img src={LOGO} alt='Logo' className='logo-image' />
+              </Link>
+            </div>
+            <div className='header-content-text text-header'>
+              <Link to={ROUTES.ANIMALS}>Adotáveis</Link>
+            </div>
+            <div className='header-content-text text-header'>
+              <Link to={ROUTES.HELP}>Como ajudar</Link>
+            </div>
+            <div className='header-content-text text-header'>
+              <Link to={ROUTES.EVENTS}>Eventos</Link>
+            </div>
+            <div className='header-content-text text-header'>
+              <Link to={ROUTES.CONTACT}>Contato</Link>
+            </div>
           </div>
-          <div>
-            <Link to={ROUTES.HELP}>Como ajudar</Link>
+          <div className='header-content'>
+            <button onClick={handleLogout} className='text-header'>
+              Logout
+            </button>
           </div>
-          <div>
-            <Link to={ROUTES.EVENTS}>Eventos</Link>
-          </div>
-          <div>
-            <Link to={ROUTES.CONTACT}>Contato</Link>
-          </div>
-        </div>
-        <div>
-          <button onClick={handleLogout}>Logout</button>
         </div>
       </div>
     )
