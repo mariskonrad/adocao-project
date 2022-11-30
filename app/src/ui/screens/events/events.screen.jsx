@@ -2,6 +2,7 @@ import { Header, EventCard } from '../../components'
 import { useEventsApi } from '../../../assets/hooks/api'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import './events.style.css'
 
 export function EventsScreen() {
   const eventsApi = useEventsApi()
@@ -29,15 +30,13 @@ export function EventsScreen() {
       <Header />
       <div>
         <div>
-          <h1>Nossos eventos</h1>
+          <div className='title'>Nossos eventos</div>
         </div>
-        <div>
+        <div className='events-container'>
           {allEvents?.content.map(event => {
             return (
-              <div key={event.id} className='card-container'>
-                <Link to={`/eventos/${event.id}`}>
-                  <EventCard event={event} />
-                </Link>
+              <div key={event.id}>
+                <EventCard event={event} />
               </div>
             )
           })}

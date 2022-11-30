@@ -1,12 +1,15 @@
+import { formatDateWhitHours } from '../../../utils'
+
 export function EventCard({ event }) {
+  const dateFormatted = formatDateWhitHours(event.startEvent)
   return (
-    <div>
-      <div className='event-image'>
-        <img src={event.image} alt='Imagem do evento' />
+    <div className='card-container'>
+      <div>
+        <img src={event.image} alt='Imagem do evento' className='event-image' />
       </div>
-      <div>Descrição: {event.description}</div>
-      <div>Data e hora: {event.startEvent}</div>
-      <div>Local: {event.location}</div>
+      <div className='text-primary'>{event.description}</div>
+      <div className='text-tertiary'>Data e hora: {dateFormatted}</div>
+      <div className='text-tertiary'>Local: {event.location}</div>
     </div>
   )
 }
