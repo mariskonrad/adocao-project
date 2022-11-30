@@ -68,7 +68,7 @@ export function LoginScreen() {
               />
             </div>
             <div>
-              <button className='primary-button'>Enviar</button>
+              <button className='primary-button'>Entrar</button>
             </div>
           </form>
         </fieldset>
