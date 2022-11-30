@@ -1,0 +1,10 @@
+.help-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.help-content-text {
+  padding: 10px;
+}
