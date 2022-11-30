@@ -6,7 +6,6 @@ import { ROUTES } from '../../../constants/routes'
 import LOGO from '../../../images/logo.png'
 import './login.style.css'
 import '../../components/button/button.style.css'
-import { Button } from '../../components'
 
 export function LoginScreen() {
   const [username, setUsername] = useState('')

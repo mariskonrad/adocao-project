@@ -6,6 +6,7 @@
   border-radius: 10px;
   font-size: 16px;
   cursor: pointer;
+  margin: 10px;
 }
 
 .primary-button:hover {

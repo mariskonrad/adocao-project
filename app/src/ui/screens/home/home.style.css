@@ -1,0 +1,12 @@
+.home-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-title {
+  font-family: Pacifico;
+  font-size: 70px;
+  color: palevioletred;
+}
